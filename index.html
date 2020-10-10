@@ -10,12 +10,24 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Home</a>
         <a class="navbar-brand" href="projects.html">Projects</a>
+        <a class="navbar-brand" href="signup-modal/login.html">Sign Up Modal</a>
+        <a class="navbar-brand" href="tic-tac-toe/tic-tac-toe.html">Tic Tac Toe Game</a>
         <form action="https://github.com/evcl8125/">
             <input type="image" value="Github" img
                 src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" width="50" height="50" />
         </form>
     </nav>
 </head>
+
+<script>
+    function addCard(divId) {
+        var tweet = $('<div class="card"><div align="right"><a class="btn btn-danger" role="button" onclick="deleteCard(this)">-</a></div><center><img src="https://image.flaticon.com/icons/png/512/124/124021.png"width="50"></center><h5 align="right">Tweet</h5><a align="right">Sample tweet will go here!</a></div>');
+        tweet.appendTo(divId);
+    }
+    function deleteCard(divId) {
+        divId.parentNode.parentNode.remove();
+    }
+</script>
 
 <body>
     <h1 class="container-fluid">
@@ -36,31 +48,33 @@
     <a class="btn btn-primary" href="form.html" role="button">Add Interest</a>
     <div class="container">
         <div class="row">
-            <div class="card" style="width: 18rem;">
+            <div id="interest1" class="card" style="width: 18rem;">
                 <img class="card-img-top"
                     src="https://i.pinimg.com/originals/e3/30/61/e33061bd7a23d95b215afa9ee569d808.jpg"
                     alt="Card image cap" width="200">
                 <div class="card-body">
                     <h4>Futureism</h4>
                     <p class="card-text">The future is awesome and I love exploring the technology to come.</p>
+                    <a class="btn btn-primary" role="button" onclick="addCard(interest1)">+</a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div id="interest2" class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://miro.medium.com/max/4192/1*yj9_ugyJn6XQ5Da9IqCXyg.jpeg"
                     alt="Card image cap" width="200">
                 <div class="card-body">
                     <h4>Video games</h4>
                     <p class="card-text">I've been playing videogames as long as I can remember.</p>
+                    <a class="btn btn-primary" role="button" onclick="addCard(interest2)">+</a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div id="interest3" class="card" style="width: 18rem;">
                 <img class="card-img-top"
-                    src="https://lh3.googleusercontent.com/proxy/ULtknyJ3np9GjmPD3GETaP386UlAEHS_48t8Ww6oEeJZik7ZnvvN9_38C-Hdpoi8okS97XquBEV8Anpy2O_vIsZqFWJ5TM5U247nnwvJyHdssuymvRkV1bHoSckYJQ"
+                    src="https://oddslifenetstorage.blob.core.windows.net/esportsinsider/2020/06/Ecricket-World-Series.jpg"
                     alt="Card image cap" width="200">
                 <div class="card-body">
                     <h4>Sports</h4>
-                    <p class="card-text">I watch all kinds of sports, including e-sports, and get too excited sometimes.
-                    </p>
+                    <p class="card-text">I watch all kinds of sports, including e-sports, and get too excited sometimes.</p>
+                    <a class="btn btn-primary" role="button" onclick="addCard(interest3)">+</a>
                 </div>
             </div>
 
