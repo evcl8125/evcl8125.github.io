@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flickr Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <a class="navbar-brand" href="../projects.html">Projects</a>
+        <a class="navbar-brand" href="../signup-modal/login.html">Sign Up Modal</a>
+        <a class="navbar-brand" href="../tic-tac-toe/tic-tac-toe.html">Tic Tac Toe Game</a>
+        <a class="navbar-brand" href="index.html">FlickrAPI</a>
+        <form action="https://github.com/evcl8125/">
+            <input type="image" value="Github" img
+                src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" width="50" height="50" />
+        </form>
+    </nav>
+</head>
+
+<body>
+    <br>
+    <div class="d-flex justify-content-center">
+        <select id="itemCountDropDown">
+            <option value="0">-- Item Count --</option>
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="70">70</option>
+        </select>
+        <input type="text" id="search-text" placeholder="Search">
+        <button type="button" onclick="submit()" id="flickr-API">Search</button>
+    </div>
+    <div class="card-deck-wrapper">
+        <div id="flickr-placeholder" class="card-deck"> </div>
+    </div>
+        <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
